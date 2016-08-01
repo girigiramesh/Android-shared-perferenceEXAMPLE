@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 
 public class saveDataActivity extends AppCompatActivity {
- private TextView gt_name,gt_pass;
+    private TextView gt_name, gt_pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +19,9 @@ public class saveDataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_save_data);
         gt_name = (TextView) findViewById(R.id.gt_name);
         gt_pass = (TextView) findViewById(R.id.gt_pass);
-        SharedPreferences sharedPreferences = getSharedPreferences("Myfile", Context.MODE_PRIVATE);
-        String name = sharedPreferences.getString("Username","no data found");
-        String pass = sharedPreferences.getString("password","no data found");
+        SharedPreferences sharedPreferences = getSharedPreferences(Constant.ME, Context.MODE_PRIVATE);
+        String name = sharedPreferences.getString("Username", "no data found");
+        String pass = sharedPreferences.getString("password", "no data found");
         gt_name.setText(name);
         gt_pass.setText(pass);
 

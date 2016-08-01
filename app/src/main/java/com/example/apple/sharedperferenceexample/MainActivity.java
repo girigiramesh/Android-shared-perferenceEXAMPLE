@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.button_save) {
-            SharedPreferences sharedPreferences = getSharedPreferences("Myfile", Context.MODE_PRIVATE);
+            SharedPreferences sharedPreferences = getSharedPreferences(Constant.ME, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("Username", pt_name.getText().toString());
             editor.putString("password", pt_pass.getText().toString());
