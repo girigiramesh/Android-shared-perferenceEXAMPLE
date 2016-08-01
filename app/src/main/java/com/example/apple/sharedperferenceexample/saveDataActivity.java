@@ -20,8 +20,8 @@ public class saveDataActivity extends AppCompatActivity {
         gt_name = (TextView) findViewById(R.id.gt_name);
         gt_pass = (TextView) findViewById(R.id.gt_pass);
         SharedPreferences sharedPreferences = getSharedPreferences(Constant.ME, Context.MODE_PRIVATE);
-        String name = sharedPreferences.getString("Username", "no data found");
-        String pass = sharedPreferences.getString("password", "no data found");
+        String name = sharedPreferences.getString(Constant.EXTRA_USERNAME, "no data found");
+        String pass = sharedPreferences.getString(Constant.EXTRA_PASSWORD, "no data found");
         gt_name.setText(name);
         gt_pass.setText(pass);
 

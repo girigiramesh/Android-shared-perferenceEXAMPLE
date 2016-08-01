@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view.getId() == R.id.button_save) {
             SharedPreferences sharedPreferences = getSharedPreferences(Constant.ME, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("Username", pt_name.getText().toString());
-            editor.putString("password", pt_pass.getText().toString());
+            editor.putString(Constant.EXTRA_USERNAME, pt_name.getText().toString());
+            editor.putString(Constant.EXTRA_PASSWORD, pt_pass.getText().toString());
             editor.commit();
             Toast.makeText(MainActivity.this, "Data will be saved sucessfully", Toast.LENGTH_LONG).show();
         } else {
